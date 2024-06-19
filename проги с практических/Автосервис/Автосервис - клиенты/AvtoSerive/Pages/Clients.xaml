@@ -1,0 +1,137 @@
+﻿<Page x:Class="AvtoSerive.Pages.Clients"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AvtoSerive.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Clients">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="MyCol" >
+                <Border BorderThickness="1" BorderBrush="Black" Margin="5,5,5,5">
+                    <StackPanel Width="auto" Height="auto" Orientation="Horizontal" >
+
+                        <Image Source="{Binding PhotoPath}" Width="75" Height="75" HorizontalAlignment="Right"></Image>
+                        <StackPanel Orientation="Vertical" Height="auto">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="{Binding Name}" Width="400" HorizontalAlignment="Center"></TextBlock>
+                            </StackPanel>
+                            <TextBlock Text="{Binding Phone}" Width="175" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Email}" Width="175" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Birthday}" Width="175" HorizontalAlignment="Left"></TextBlock>
+
+
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+            </DataTemplate>
+        </Grid.Resources>
+
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" TextChanged="TextBox_TextChanged"></TextBox>
+            <ComboBox Grid.Column="1" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Tag="0">
+                    <TextBlock Text="Без сортировки" ></TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="1">
+                    <TextBlock Text="Фамилия от А-Я" ></TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="2">
+                    <TextBlock Text="Фамилия от Я-А"></TextBlock>
+                </ComboBoxItem>
+            </ComboBox>
+
+            <ComboBox x:Name="cb_filter" Grid.Column="2" SelectionChanged="cb_filter_SelectionChanged" >
+                <ComboBoxItem Tag="0">
+                    <TextBlock Text="Без фильтрации" ></TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="1">
+                    <TextBlock Text="Мужской пол" ></TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="2">
+                    <TextBlock Text="Женский пол" ></TextBlock>
+                </ComboBoxItem>
+            </ComboBox>
+
+            <ComboBox Grid.Column="3" x:Name="cmb_count" SelectionChanged="cmb_count_SelectionChanged">
+                <ComboBoxItem Tag="0">
+                    <TextBlock Text="10" ></TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="1">
+                    <TextBlock Text="50" ></TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem Tag="2">
+                    <TextBlock Text="200"></TextBlock>
+                </ComboBoxItem>
+            </ComboBox>
+
+
+
+
+        </Grid>
+
+        <DataGrid AutoGenerateColumns="False" x:Name="clientsGrid" Grid.Row="1" IsReadOnly="True" GridLinesVisibility="None" LoadingRow="agentGrid_LoadingRow" MouseDown="agentGrid_MouseDown" >
+            <DataGrid.Columns>
+                <DataGridTemplateColumn CellTemplate="{StaticResource MyCol}" Width="*">
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="updateButton" Height="auto" Width="auto" Grid.Column="0" Content="Изменить  тэг" Visibility="Visible " Click="updateButton_Click_1" />
+            <Button x:Name="addButton" Height="auto" Width="auto" Grid.Column="3" Content="Добавить" Click="addButton_Click" />
+
+        </Grid>
+        <StackPanel Grid.Column="2"  Grid.Row="2"  Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <TextBlock Text="Всего: " HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="full" Text="" HorizontalAlignment="Right" VerticalAlignment="Center">
+            </TextBlock>
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="2"  Grid.Row="2" Orientation="Horizontal" Margin="300 0 0 0" HorizontalAlignment="Stretch" Width="auto">
+            <Button x:Name="back" Content="B" Click="Button_Click" IsEnabled="False" Height="30" Width="20"></Button>
+            <StackPanel x:Name="pagin" Grid.Column="2" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Stretch" Width="auto">
+            </StackPanel>
+            <Button x:Name="forward" Content="F" Click="Button_Click1" Height="30" Width="20"></Button>
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+
+</Page>

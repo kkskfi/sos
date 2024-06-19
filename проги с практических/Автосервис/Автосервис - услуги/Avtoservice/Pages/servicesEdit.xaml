@@ -1,0 +1,121 @@
+﻿<Page x:Class="Avtoservice.Pages.servicesEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Avtoservice.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="servicesEdit">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="MyCol" >
+                <Border BorderThickness="1" BorderBrush="Black" Margin="5,5,5,5">
+                    <StackPanel Width="auto" Height="auto" Orientation="Horizontal" >
+
+                        <Image Source="{Binding Path =Client.PhotoPath}" Width="75" Height="75" HorizontalAlignment="Right"></Image>
+                        <StackPanel Orientation="Vertical" Height="auto">
+                            <StackPanel Orientation="Vertical" >
+                                <TextBlock Text="{Binding Path=Client.LastName}" Width="auto" ></TextBlock>
+                                <TextBlock Text="{Binding Path=Client.FirstName}" Width="auto" ></TextBlock>
+                                <TextBlock Text="{Binding Path=Client.Patronymic}" Width="auto"></TextBlock>
+                            </StackPanel>
+                            <TextBlock Text="{Binding Path = Client.Phone}" Width="auto" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Название" HorizontalAlignment="Right" Grid.Row="1" Height="25" Grid.Column="0"></Label>
+            <Label Content="Цена" HorizontalAlignment="Right" Grid.Row="2" Height="25" Grid.Column="0"></Label>
+            <Label Content="Длительность в секундах" HorizontalAlignment="Right" Grid.Row="3" Height="25" Grid.Column="0"></Label>
+            
+
+            <TextBox x:Name="Title" Grid.Row="1" Grid.Column="2" Width="175" Height="30" HorizontalAlignment="Left">
+            </TextBox>
+            <TextBox x:Name="Cost" Grid.Row="2" Grid.Column="2" Width="175" Height="30" HorizontalAlignment="Left">
+            </TextBox>
+            <TextBox x:Name="DurationInSeconds" Grid.Row="3" Grid.Column="2" Width="175" Height="30" HorizontalAlignment="Left">
+            </TextBox>
+
+            <Button Grid.Column="0" x:Name="btnWriteAg" Grid.Row="11" Content="Записать" Click="Button_Click"></Button>
+            <Button Grid.Column="1" x:Name="btnDelAg" Grid.Row="9" Content="Удалить" Click="Button_Click_1" Grid.ColumnSpan="2"   Margin="44,0,0,0" ></Button>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Сведения об услуге" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DataGrid Grid.Row="1" x:Name="clientGrid" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="clientGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn CellTemplate="{StaticResource MyCol}" Width="*">
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Grid.Row="0" Text="Сведения о посещениях клиента" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
+
+                <DatePicker x:Name="date" Grid.Column="0" >
+                </DatePicker>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <TextBox x:Name="mask" Grid.Column="2" TextChanged="mask_TextChanged" Margin="0,-25,7,36"/>
+                <ComboBox x:Name="clientList" Grid.Column="2"  Margin="0,0,7,0" SelectionChanged="clientList_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding LastName}"></TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="btnWritHi" Content="Добавить" Click="Button_Click_2"></Button>
+                <Button Grid.Column="2" x:Name="btnDelHi" Content="Удалить" Click="Button_Click_3"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

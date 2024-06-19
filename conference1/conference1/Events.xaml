@@ -1,0 +1,81 @@
+﻿<Page x:Class="conference1.Events"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:conference1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Events">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="MyCol" >
+                <Border BorderThickness="1" BorderBrush="Black" Margin="5,5,5,5">
+                    <StackPanel Width="auto" Height="auto" Orientation="Horizontal" >
+
+                        <Image Source="{Binding PhotoPath}" Width="50" Height="50" HorizontalAlignment="Right"></Image>
+                        <StackPanel Orientation="Vertical" Height="auto">
+                            <TextBlock Text="{Binding TitleEvents}" Width="600" HorizontalAlignment="Left"></TextBlock>
+                            <!--<TextBlock Text="{Binding Path=Cities.Title}" Width="auto" HorizontalAlignment="Left"></TextBlock>-->
+                            <TextBlock Text="{Binding Date, StringFormat='dd.MM.yyyy'}" Width="auto" HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Path = Direction1.Title}" Width="auto" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <ComboBox x:Name="Directions"  Grid.Column="2"  Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding}" SelectionChanged="Directions_SelectionChanged">
+
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}"></TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+
+        <DataGrid AutoGenerateColumns="False" x:Name="eventGrid" Grid.Row="1" IsReadOnly="True" GridLinesVisibility="None" MouseDown="eventGrid_MouseDown">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn   CellTemplate="{StaticResource MyCol}" Width="*">
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Button x:Name="authorizationButton" Height="auto" Width="100" Grid.Column="0" Content="Авторизация" Click="authorizationButton_Click"/>
+            <Button x:Name="add_Button" Height="auto" Width="100" Grid.Column="0" Content="Добавить" Visibility="Hidden"  Click="add_Button_Click"/>
+        </Grid>
+    </Grid>
+</Page>

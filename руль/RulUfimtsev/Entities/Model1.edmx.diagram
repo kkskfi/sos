@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="da1f03c6c46f453f8ae0e6f920caea5b" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="CarServiceModel.Category" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.Maker" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.Order" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.OrderProduct" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.PickupPoint" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.Product" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.Provider" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.Role" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.Status" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarServiceModel.User" Width="1.5" PointX="8" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="CarServiceModel.FK_Product_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceModel.FK_Product_Maker" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceModel.FK_Order_PickupPoint" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceModel.FK_Order_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceModel.FK_OrderProduct_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceModel.FK_OrderProduct_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceModel.FK_Product_Provider" ManuallyRouted="false" />
+        <AssociationConnector Association="CarServiceModel.FK__User__UserRole__398D8EEE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

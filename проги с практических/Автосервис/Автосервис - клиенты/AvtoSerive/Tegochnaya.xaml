@@ -1,0 +1,45 @@
+﻿<Window x:Class="AvtoSerive.Tegochnaya"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AvtoSerive"
+        mc:Ignorable="d"
+        Title="Тэгочная" Height="450" Width="400" Icon="/service_logo.png" ResizeMode="NoResize">
+    <Border BorderThickness="5" BorderBrush="Aqua" >
+        <Grid>
+            <Grid.Resources>
+                <DataTemplate x:Key="MyCol" >
+                    <Border BorderThickness="1" BorderBrush="Black" Margin="5,5,5,5">
+                        <StackPanel Width="auto" Height="auto" Orientation="Horizontal" >
+
+                            <StackPanel Orientation="Vertical" Height="auto">
+                                <TextBlock Text="{Binding Title}" Width="175" HorizontalAlignment="Left" Foreground="{Binding Color}"/>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </Grid.Resources>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <DataGrid AutoGenerateColumns="False" x:Name="grid_tagClient" Grid.Row="0" IsReadOnly="True" GridLinesVisibility="None" >
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn CellTemplate="{StaticResource MyCol}" Width="*">
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Button x:Name="btn_addTag" Content="Добавить тэг" Grid.Row="1" Width="100" Margin="-270 0 0 0 " Click="btn_addTag_Click"/>
+                <ComboBox x:Name="cb_tag" Grid.Row="1" Width="125" Height="30" HorizontalAlignment="Left" Margin="135 0 0 0" VerticalAlignment="Center" ItemsSource="{Binding}"/>
+                <Button x:Name="btn_deleteTag" Content="Удалить тэг" Grid.Row="1" Width="100" Margin="270 0 0 0 " Click="btn_deleteTag_Click"/>
+                
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

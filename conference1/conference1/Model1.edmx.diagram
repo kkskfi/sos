@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3da1f4f2ac6e490aab8100434d309cda" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Activity" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Cities" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Countries" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Direction" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Event" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Events" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Genders" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Jury" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Members" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Moderators" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Organizers" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Activity_Moderators" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Events_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Jury_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Members_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Moderators_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Organizers_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Events_Direction" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Jury_Direction" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Moderators_Direction" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Moderators_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Members_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Moderators_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Organizers_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ActivityJury" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.EventsActivity" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.Winner" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

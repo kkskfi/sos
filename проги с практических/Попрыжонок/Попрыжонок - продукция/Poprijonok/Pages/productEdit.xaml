@@ -1,0 +1,137 @@
+﻿<Page x:Class="Poprijonok.Pages.productEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Poprijonok.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="productEdit">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="MyCol" >
+                <Border BorderThickness="1" BorderBrush="Black" Margin="5,5,5,5">
+                    <StackPanel Width="auto" Height="auto" Orientation="Horizontal" >
+
+                        <Image Source="{Binding Path =Agent.Logo}" Width="75" Height="75" HorizontalAlignment="Right"></Image>
+                        <StackPanel Orientation="Vertical" Height="auto">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="{Binding Path=Agent.AgentType.Title}" Width="auto" HorizontalAlignment="Left"></TextBlock>
+                                <TextBlock Text="{Binding Path = Agent.Title}" Width="auto" HorizontalAlignment="Left" Margin="10 0 0 0"></TextBlock>
+                            </StackPanel>
+                            <TextBlock Text="{Binding Path = Agent.Phone}" Width="auto" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </DataTemplate>
+        </Grid.Resources>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Наименование" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0"></Label>
+            <Label Content="Артикул" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0"></Label>
+            <Label Content="Тип" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0"></Label>
+            <Label Content="ProductionPersonCount" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0"></Label>
+            <Label Content="ProductionWorkshopNumber" HorizontalAlignment="Right" Grid.Row="5" Grid.Column="0"></Label>
+            <Label Content="Минимальная цена" HorizontalAlignment="Right" Grid.Row="6" Grid.Column="0"></Label>
+            <TextBox x:Name="Title" Grid.Row="1" Grid.Column="2" Width="100" HorizontalAlignment="Left">
+            </TextBox>
+            <TextBox x:Name="ArticleNumber" Grid.Row="2" Grid.Column="2" Width="100" HorizontalAlignment="Left">
+            </TextBox>
+            <TextBox x:Name="ProductionPersonCount" Grid.Row="4" Grid.Column="2" Width="100" HorizontalAlignment="Left">
+            </TextBox>
+            <TextBox x:Name="ProductionWorkshopNumber" Grid.Row="5" Grid.Column="2" Width="100" HorizontalAlignment="Left">
+            </TextBox>
+            <TextBox x:Name="MinCostForAgent" Grid.Row="6" Grid.Column="2" Width="100" HorizontalAlignment="Left">
+            </TextBox>
+            <Button Grid.Column="0" x:Name="btnWriteAg" Grid.Row="11" Content="Записать" Click="Button_Click"></Button>
+            <Button Grid.Column="2" x:Name="btnDelAg" Grid.Row="11" Content="Удалить" Click="Button_Click_1"></Button>
+            <ComboBox x:Name="Type" Grid.Column="2" Grid.Row="3" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding}" SelectionChanged="Type_SelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="Сведения о "/><Run Language="ru-ru" Text="товаре"/></TextBlock>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DataGrid AutoGenerateColumns="False" x:Name="agentGrid" Grid.Row="1" IsReadOnly="True" GridLinesVisibility="None" >
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn CellTemplate="{StaticResource MyCol}" Width="*">
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Grid.Row="0" Text="Сведения о продажах агента" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <DatePicker x:Name="date" Grid.Column="0" >
+                </DatePicker>
+                <TextBox x:Name="count" Grid.Column="1" TextChanged="count_TextChanged">
+                </TextBox>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <TextBox x:Name="mask" Height="30" Grid.Column="2" TextChanged="mask_TextChanged" Margin="0 -60 0 0"></TextBox>
+                <ComboBox x:Name="agent" Grid.Column="2" SelectionChanged="agent_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Title}"></TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="btnWritHi" Content="Добавить" Click="Button_Click_2"></Button>
+                <Button Grid.Column="2" x:Name="btnDelHi" Content="Удалить" Click="Button_Click_3"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</Page>

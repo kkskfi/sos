@@ -1,0 +1,85 @@
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.csproj.AssemblyReference.cache
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.csproj.SuggestedBindingRedirects.cache
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\MainWindow.g.cs
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\Pages\Clients.g.cs
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\App.g.cs
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive_Content.g.cs
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive_MarkupCompile.cache
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive_MarkupCompile.lref
+G:\МДК.02.02\AvtoSerive\AvtoSerive\bin\Debug\AvtoSerive.exe.config
+G:\МДК.02.02\AvtoSerive\AvtoSerive\bin\Debug\AvtoSerive.exe
+G:\МДК.02.02\AvtoSerive\AvtoSerive\bin\Debug\AvtoSerive.pdb
+G:\МДК.02.02\AvtoSerive\AvtoSerive\bin\Debug\EntityFramework.dll
+G:\МДК.02.02\AvtoSerive\AvtoSerive\bin\Debug\EntityFramework.SqlServer.dll
+G:\МДК.02.02\AvtoSerive\AvtoSerive\bin\Debug\EntityFramework.xml
+G:\МДК.02.02\AvtoSerive\AvtoSerive\bin\Debug\EntityFramework.SqlServer.xml
+G:\МДК.02.02\AvtoSerive\AvtoSerive\bin\Debug\ru\EntityFramework.resources.dll
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\MainWindow.baml
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\Pages\Clients.baml
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.g.resources
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.Properties.Resources.resources
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.csproj.GenerateResource.cache
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.csproj.CoreCompileInputs.cache
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.csproj.CopyComplete
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.exe
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\AvtoSerive.pdb
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\Pages\clientsEdit.g.cs
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\Pages\clientsEdit.baml
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\Tegochnaya.g.cs
+G:\МДК.02.02\AvtoSerive\AvtoSerive\obj\Debug\Tegochnaya.baml
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\AvtoSerive.exe.config
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\AvtoSerive.exe
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\AvtoSerive.pdb
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\EntityFramework.dll
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\EntityFramework.xml
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.csproj.AssemblyReference.cache
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\MainWindow.g.cs
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Pages\Clients.g.cs
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Pages\clientsEdit.g.cs
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Tegochnaya.g.cs
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\App.g.cs
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive_Content.g.cs
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive_MarkupCompile.cache
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive_MarkupCompile.lref
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\MainWindow.baml
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Pages\Clients.baml
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Pages\clientsEdit.baml
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Tegochnaya.baml
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.g.resources
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.Properties.Resources.resources
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.csproj.GenerateResource.cache
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.csproj.CoreCompileInputs.cache
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.csproj.CopyComplete
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.exe
+C:\Users\mcher\Desktop\дед\решения\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.pdb
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\AvtoSerive.exe.config
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\AvtoSerive.exe
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\AvtoSerive.pdb
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\EntityFramework.dll
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\EntityFramework.xml
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.csproj.AssemblyReference.cache
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\MainWindow.g.cs
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Pages\Clients.g.cs
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Pages\clientsEdit.g.cs
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Tegochnaya.g.cs
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\App.g.cs
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive_Content.g.cs
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive_MarkupCompile.cache
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive_MarkupCompile.lref
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\MainWindow.baml
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Pages\Clients.baml
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Pages\clientsEdit.baml
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\Tegochnaya.baml
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.g.resources
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.Properties.Resources.resources
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.csproj.GenerateResource.cache
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.csproj.CoreCompileInputs.cache
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.csproj.CopyComplete
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.exe
+C:\Users\mcher\Desktop\дед\Автосервис\Автосервис - клиенты\AvtoSerive\obj\Debug\AvtoSerive.pdb

@@ -1,0 +1,95 @@
+﻿<Page x:Class="RulUfimtsev.Pages.EditOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RulUfimtsev.Pages"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditOrderPage">
+    <Page.Resources>
+        <sys:String x:Key="defaultImage">
+            pack://application:,,,/Resources/picture.png
+        </sys:String>
+    </Page.Resources>
+    <Grid>
+        <ScrollViewer>
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width ="150"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                    <TextBlock Text="Номер заказа:"/>
+                    <TextBlock Text="{Binding OrderID}"/>
+
+                    <TextBlock Text="Дата заказа:"/>
+                    <TextBlock Text="{Binding OrderDate}"/>
+
+                    <TextBlock Text="Дата доставки заказа"/>
+                    <DatePicker Name="datePickerDeliveryDate" FontSize="14" FontFamily="Comic Sans MS" SelectedDate="{Binding OrderDeliveryDate}" SelectedDateFormat="Long"/>
+
+                    <TextBlock Text="Пункт выдачи:"/>
+                    <ComboBox Name="cmbPickUpPoint" DisplayMemberPath="Address" SelectedValuePath="ID"/>
+
+                    <TextBlock Text="Статус:"/>
+                    <ComboBox Name="cmbStatus" DisplayMemberPath="StatusName" SelectedValuePath="StatusID"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" >
+                    <ListView x:Name="LViewProducts" d:ItemsSource="{d:SampleData ItemCount=1}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="Black" BorderThickness="1">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="50"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Height="90" Width="100" Margin="5" Grid.Column="0" Stretch="Uniform" Source="{Binding ImgPath, FallbackValue={StaticResource defaultImage}}"/>
+
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="{Binding ProductName}" FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding ProductDescription}"/>
+                                            <TextBlock Text="{Binding Manufacter}"/>
+                                            <TextBlock Text="{Binding CostWithDiscount, StringFormat='\{0} рублей'}"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2">
+                                            <Button x:Name="btnDeleteProduct" Width="40" Height="40" Content="X" FontSize="20" FontWeight="Bold" Margin="0,40,0,0" HorizontalAlignment="Center" Click="btnDeleteProduct_Click"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Стоимость:"/>
+                            <TextBlock Name="txtTotal"/>
+                        </StackPanel>
+                        <Button Name="btnAddProduct" Margin="15,0,0,0" HorizontalAlignment="Right" Content="Добавить продукт" Width="200" Click="btnAddProduct_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Name="btnDeleteOrder" Content="Удалить" Width="200" Click="btnDeleteOrder_Click"/>
+                        <Button Name="btnSaveOrder" Content="Сохранить" Width="200" Click="btnSaveOrder_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
